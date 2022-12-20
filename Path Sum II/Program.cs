@@ -55,7 +55,7 @@ namespace Path_Sum_II
       if (root == null) return;
       temp.Add(root.val);
       currentSum += root.val;
-      if (currentSum == targetSum)
+      if (root.left == null && root.right == null && currentSum == targetSum)
         result.Add(new List<int>(temp));
 
       Helper(root.left, targetSum, currentSum, temp, result);
